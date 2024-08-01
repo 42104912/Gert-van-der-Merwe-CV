@@ -18,7 +18,10 @@
             <a href="#about" class="active">About Me</a>
             <a href="#expertise">Expertise</a>
             <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
             <a href="#project">Project</a>
+            <a href="#references">References</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -29,7 +32,7 @@
             <img class="pattern" src="Hexagon Pattern.jpg" alt="">
         </div>
         <div class="aboutMeImg">
-            <img src="Gert van der Merwe.jpg" alt="">
+            <img src="Gert van der Merwe1.JPG" alt="">
         </div>
         <div class="about">
             <h1>Hello, my name is <br><span>Gert van der Merwe</span></h1>
@@ -52,49 +55,79 @@
     </section>
 
     <!-- Technical Expertise Section -->
-    <section class="services" id="expertise">
+    <section class="technicalExpertise" id="expertise">
         <h2 class="heading">Technical Expertise</h2>
-
-        <div class="service-container">
-            <div class="single-service">
+        <div class="expertiseContainer">
+            <div class="singleExpertise">
                 <div class="content">
                     <span class="icon">
                         <i class="fab fa-asymmetrik"></i>
                     </span>
                     <h3 class="title">Web Designer</h3>
-                    <p class="description" style="font-size: 2em;">
-                        As a Web Designer, I focus on creating visually engaging and user-centric designs that elevate the online presence of clients. My approach combines creativity with technical knowledge to craft aesthetically pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals.
-                      </p>                      
-                    <a href="#" class="learn-more">Read More</a>
+                    <p class="description" style="font-size: 20px;">
+                        As a Web Designer, I focus on creating visually engaging and user-centric designs that elevate the online presence of clients. My approach combines creativity with technical knowledge to craft aesthetically
+                    </p>
+                    <span class="dots dots1" style="font-size: 20px;">... </span>
+                    <input type="checkbox" id="btn1" />
+                    <p class="extra extra1" style="font-size: 20px;">
+                        pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals. <br>
+                    </p>
+                    <label id="readLabel1" for="btn1"></label>
                 </div>
-                <span class="circle-before"></span>
             </div>
-
-            <div class="single-service">
+    
+            <div class="singleExpertise">
                 <div class="content">
                     <span class="icon">
                         <i class="fab fa-artstation"></i>
                     </span>
                     <h3 class="title">Software Developer</h3>
-                    <p class="description" style="font-size: 2em;">In my role as a Software Developer, I design and implement software solutions that address complex problems and enhance operational efficiency. My expertise spans various programming languages and development frameworks, enabling me to build robust applications from the ground up. I am skilled in both front-end and back-end development, and I prioritize writing clean, maintainable code while collaborating with teams to ensure seamless integration and deployment of software systems.</p>
-                    <a href="#" class="learn-more">Read More</a>
+                    <p class="description" style="font-size: 20px;">
+                        In my role as a Software Developer, I design and implement software solutions that address complex problems and enhance operational efficiency. My expertise spans various programming
+                    </p>
+                    <span class="dots dots2" style="font-size: 20px;">... </span>
+                    <input type="checkbox" id="btn2" />
+                    <p class="extra extra2" style="font-size: 20px;">
+                        languages and development frameworks, enabling me to build robust applications from the ground up. I am skilled in both front-end and back-end development, and I prioritize writing clean, maintainable code while collaborating with teams to ensure seamless integration and deployment of software systems. <br>
+                    </p>
+                    <label id="readLabel2" for="btn2"></label>
                 </div>
-                <span class="circle-before"></span>
             </div>
-
-            <div class="single-service">
+    
+            <div class="singleExpertise">
                 <div class="content">
                     <span class="icon">
                         <i class="fas fa-laptop-code"></i>
                     </span>
                     <h3 class="title">Web Developer</h3>
-                    <p class="description" style="font-size: 2em;">As a Web Developer, I specialize in building and maintaining websites that offer exceptional user experiences and functionality. With proficiency in front-end technologies like HTML, CSS, and JavaScript, as well as back-end development using PHP and databases, I create dynamic and responsive web applications. My focus is on delivering high-quality code, ensuring cross-browser compatibility, and optimizing performance to meet both client needs and industry standards.</p>
-                    <a href="#" class="learn-more">Read More</a>
+                    <p class="description" style="font-size: 20px;">
+                        As a Web Developer, I specialize in building and maintaining websites that offer exceptional user experiences and functionality. With proficiency in front-end technologies like HTML, CSS, and JavaScript, as
+                    </p>
+                    <span class="dots dots3" style="font-size: 20px;">... </span>
+                    <input type="checkbox" id="btn3" />
+                    <p class="extra extra3" style="font-size: 20px;">
+                        well as back-end development using PHP and databases, I create dynamic and responsive web applications. My focus is on delivering high-quality code, ensuring cross-browser compatibility, and optimizing performance to meet both client needs and industry standards. <br>
+                    </p>
+                    <label id="readLabel3" for="btn3"></label>
                 </div>
-                <span class="circle-before"></span>
             </div>
         </div>
     </section>
+    
+    <script>
+        function toggleContent(event) {
+            event.preventDefault();
+            const parentElement = event.target.closest('.singleExpertise');
+            parentElement.classList.toggle('expanded');
+    
+            const readMore = event.target;
+            if (readMore.innerText === "Read More") {
+                readMore.innerText = "Read Less";
+            } else {
+                readMore.innerText = "Read More";
+            }
+        }
+    </script>    
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
@@ -103,34 +136,75 @@
             <div class="row" id="skillsContainer">
                 <div class="bar">
                     <div class="info">
-                        <img src="Java.JPG" alt="">
+                        <img src="Java.JPG" alt="Java">
                         <span>Java</span>
                     </div>
                 </div>
-
+    
                 <div class="bar">
                     <div class="info">
-                        <img src="Javascript.JPG" alt="">
+                        <img src="Javascript.JPG" alt="Javascript">
                         <span>Javascript</span>
                     </div>
                 </div>
-
+    
                 <div class="bar">
                     <div class="info">
-                        <img src="HTML_CSS.JPG" alt="">
+                        <img src="HTML_CSS.JPG" alt="HTML/CSS">
                         <span>HTML/CSS</span>
                     </div>
                 </div>
-
+    
                 <div class="bar">
                     <div class="info">
-                        <img src="OracleSQL.JPG" alt="">
+                        <img src="OracleSQL.JPG" alt="Oracle SQL">
                         <span>Oracle SQL</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+        <div class="container">
+            <div class="row" id="educationContainer">
+                <div class="containerBar">
+                    <p> <h1 style="font-size:45px; text-decoration: underline; color: rgb(20, 207, 231); text-align: center;">Tertiary Education</h1><br>
+                        <h1 style="font-size:30px;">BSc Information Technology Degree</h1><br>
+                        <h3 style="font-size:15px;">Expected Graduation: [December, 2024]</h3> 
+                        <h3 style="font-size:20px;">Institution: North-West University Potchefstroom</h3>
+                    </p>
+                </div>
+
+                <div class="containerBar">
+                    <p> <h1 style="font-size:45px; text-decoration: underline; color: rgb(20, 207, 231); text-align: center;">Secondary Education</h1><br>
+                        <h1 style="font-size:30px;">Matric</h1><br>
+                        <h3 style="font-size:15px;">Year Completed: 2021</h3> 
+                        <h3 style="font-size:20px;">Institution: Roodepoort High School</h3>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h2 class="heading">Experience</h2>
+        <div class="container">
+            <div class="row" id="experienceContainer">
+                <div class="experienceBar">
+                    <p> <h1 style="font-size:45px; text-decoration: underline; color: rgb(20, 119, 231); text-align: center;">Software Developer Intern:</h1><br>
+                        <h1 style="font-size:30px;">Cyber Byte Systems Solutions | [November, 2023] - [January, 2024]</h1><br>
+                        <li style="font-size:20px;">Developed and maintained websites using HTML, CSS, JavaScript, and PHP.</li>
+                        <li style="font-size:20px;">Collaborated with team members to troubleshoot and resolve technical issues.</li>
+                        <li style="font-size:20px;">Assisted in the design and implementation of user-friendly interfaces.</li>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> 
 
     <!-- Project Section -->
     <section class="project" id="project">
@@ -140,7 +214,7 @@
                 <div class="swiper-slide">
                     <div class="box">
                         <div class="box-img">
-                            <img src="" alt="">
+                            <img src="ProjectDash.JPG" alt="">
                         </div>
                         <h3></h3>
                         <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></h5>
@@ -149,7 +223,7 @@
                 <div class="swiper-slide">
                     <div class="box">
                         <div class="box-img">
-                            <img src="" alt="">
+                            <img src="ProjectDash.JPG" alt="">
                         </div>
                         <h3></h3>
                         <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></h5>
@@ -158,7 +232,7 @@
                 <div class="swiper-slide">
                     <div class="box">
                         <div class="box-img">
-                            <img src="" alt="">
+                            <img src="ProjectDash.JPG" alt="">
                         </div>
                         <h3></h3>
                         <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></h5>
@@ -167,7 +241,7 @@
                 <div class="swiper-slide">
                     <div class="box">
                         <div class="box-img">
-                            <img src="" alt="">
+                            <img src="ProjectDash.JPG" alt="">
                         </div>
                         <h3></h3>
                         <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></ion-icon>
@@ -228,6 +302,20 @@
         <script src="https://code.ionicframework.com/ionicons/2.0.1/js/ionicons.min.js"></script>
     </section>  
 
+    <!-- References Section -->
+    <section class="references" id="references">
+        <h2 class="heading">References</h2>
+        <div class="container">
+            <div class="row" id="referencesContainer">
+                <div class="referencesBar">
+                    <p> <h1 style="font-size:45px; text-decoration: underline; color: rgb(29, 205, 211); text-align: center;">Cyber Byte Systems Solutions:</h1><br>
+                        <li style="font-size:20px;">Greg Lawson - Chief Executive Officer (CEO) - Cell: 084 408 0673</li>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> 
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -235,13 +323,13 @@
                 <div class="contact-left">
                     <h1 class="heading">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i>gevdm1@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>0636024422</p>
+                    <p><i class="fa-solid fa-phone"></i>063 602 4422</p>
                     <div class="social-icon">
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-github"></i></a>
                     </div>
                     <button class="btn-cv">
-                        <a href="Gert van der Merwe - CV.pdf">Download CV</a>
+                        <a href="">Download CV</a>
                     </button>
                 </div>
                 <div class="contact-right">
@@ -265,9 +353,14 @@
             <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
         <ul class="list">
-            <li><a href="#">Service</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#references">References</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <p class="copyright">
             © Gert van der Merwe | All Rights Reserved
