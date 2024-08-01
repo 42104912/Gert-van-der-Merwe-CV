@@ -68,14 +68,14 @@
                         As a Web Designer, I focus on creating visually engaging and user-centric designs that elevate the online presence of clients. My approach combines creativity with technical knowledge to craft aesthetically
                     </p>
                     <span class="dots dots1" style="font-size: 20px;">... </span>
-                    <input type="checkbox" id="btn1" />
+                    <input type="checkbox" id="btn1" class="read-more-toggle" />
                     <p class="extra extra1" style="font-size: 20px;">
                         pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals. <br>
                     </p>
-                    <label id="readLabel1" for="btn1"></label>
+                    <label for="btn1" class="readLabel">Read More</label>
                 </div>
             </div>
-    
+
             <div class="singleExpertise">
                 <div class="content">
                     <span class="icon">
@@ -86,14 +86,14 @@
                         In my role as a Software Developer, I design and implement software solutions that address complex problems and enhance operational efficiency. My expertise spans various programming
                     </p>
                     <span class="dots dots2" style="font-size: 20px;">... </span>
-                    <input type="checkbox" id="btn2" />
+                    <input type="checkbox" id="btn2" class="read-more-toggle" />
                     <p class="extra extra2" style="font-size: 20px;">
                         languages and development frameworks, enabling me to build robust applications from the ground up. I am skilled in both front-end and back-end development, and I prioritize writing clean, maintainable code while collaborating with teams to ensure seamless integration and deployment of software systems. <br>
                     </p>
-                    <label id="readLabel2" for="btn2"></label>
+                    <label for="btn2" class="readLabel">Read More</label>
                 </div>
             </div>
-    
+
             <div class="singleExpertise">
                 <div class="content">
                     <span class="icon">
@@ -104,30 +104,15 @@
                         As a Web Developer, I specialize in building and maintaining websites that offer exceptional user experiences and functionality. With proficiency in front-end technologies like HTML, CSS, and JavaScript, as
                     </p>
                     <span class="dots dots3" style="font-size: 20px;">... </span>
-                    <input type="checkbox" id="btn3" />
+                    <input type="checkbox" id="btn3" class="read-more-toggle" />
                     <p class="extra extra3" style="font-size: 20px;">
                         well as back-end development using PHP and databases, I create dynamic and responsive web applications. My focus is on delivering high-quality code, ensuring cross-browser compatibility, and optimizing performance to meet both client needs and industry standards. <br>
                     </p>
-                    <label id="readLabel3" for="btn3"></label>
+                    <label for="btn3" class="readLabel">Read More</label>
                 </div>
             </div>
         </div>
     </section>
-    
-    <script>
-        function toggleContent(event) {
-            event.preventDefault();
-            const parentElement = event.target.closest('.singleExpertise');
-            parentElement.classList.toggle('expanded');
-    
-            const readMore = event.target;
-            if (readMore.innerText === "Read More") {
-                readMore.innerText = "Read Less";
-            } else {
-                readMore.innerText = "Read More";
-            }
-        }
-    </script>    
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
@@ -170,7 +155,7 @@
         <h2 class="heading">Education</h2>
         <div class="container">
             <div class="row" id="educationContainer">
-                <div class="containerBar">
+                <div class="containerBar container1" id="container1">
                     <p> <h1 style="font-size:45px; text-decoration: underline; color: rgb(20, 207, 231); text-align: center;">Tertiary Education</h1><br>
                         <h1 style="font-size:30px;">BSc Information Technology Degree</h1><br>
                         <h3 style="font-size:15px;">Expected Graduation: [December, 2024]</h3> 
@@ -178,7 +163,7 @@
                     </p>
                 </div>
 
-                <div class="containerBar">
+                <div class="containerBar container2" id="container2">
                     <p> <h1 style="font-size:45px; text-decoration: underline; color: rgb(20, 207, 231); text-align: center;">Secondary Education</h1><br>
                         <h1 style="font-size:30px;">Matric</h1><br>
                         <h3 style="font-size:15px;">Year Completed: 2021</h3> 
@@ -206,101 +191,127 @@
         </div>
     </section> 
 
-    <!-- Project Section -->
-    <section class="project" id="project">
-        <h2 class="heading">Project</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="box">
-                        <div class="box-img">
-                            <img src="ProjectDash.JPG" alt="">
-                        </div>
-                        <h3></h3>
-                        <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></h5>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="box">
-                        <div class="box-img">
-                            <img src="ProjectDash.JPG" alt="">
-                        </div>
-                        <h3></h3>
-                        <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></h5>
-                    </div>
-                </div>    
-                <div class="swiper-slide">
-                    <div class="box">
-                        <div class="box-img">
-                            <img src="ProjectDash.JPG" alt="">
-                        </div>
-                        <h3></h3>
-                        <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></h5>
-                    </div>
-                </div>   
-                <div class="swiper-slide">
-                    <div class="box">
-                        <div class="box-img">
-                            <img src="ProjectDash.JPG" alt="">
-                        </div>
-                        <h3></h3>
-                        <h5 class="toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></ion-icon>
-                        </h5>
-                    </div>
-                </div>              
+<!-- Project Section -->
+<section class="project" id="project">
+    <h2 class="heading">Project</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide projectContent">
+                <img src="ProjectDash.JPG" alt="">
+                <input type="checkbox" id="btn1" class="read-more-toggle" />
+                <p class="projectDesc" style="font-size: 20px;">
+                    pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals. <br>
+                </p>
+                <label for="btn1" class="readLabel toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></label>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide projectContent">
+                <img src="ProjectDash.JPG" alt="">
+                <input type="checkbox" id="btn2" class="read-more-toggle" />
+                <p class="projectDesc" style="font-size: 20px;">
+                    pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals. <br>
+                </p>
+                <label for="btn2" class="readLabel toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></label>
+            </div>
+            <div class="swiper-slide projectContent">
+                <img src="ProjectDash.JPG" alt="">
+                <input type="checkbox" id="btn3" class="read-more-toggle" />
+                <p class="projectDesc" style="font-size: 20px;">
+                    pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals. <br>
+                </p>
+                <label for="btn3" class="readLabel toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></label>
+            </div>
+            <div class="swiper-slide projectContent">
+                <img src="ProjectDash.JPG" alt="">
+                <input type="checkbox" id="btn4" class="read-more-toggle" />
+                <p class="projectDesc" style="font-size: 20px;">
+                    pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals. <br>
+                </p>
+                <label for="btn4" class="readLabel toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></label>
+            </div>
+            <div class="swiper-slide projectContent">
+                <img src="ProjectDash.JPG" alt="">
+                <input type="checkbox" id="btn5" class="read-more-toggle" />
+                <p class="projectDesc" style="font-size: 20px;">
+                    pleasing and functional websites. I develop intuitive layouts, effective navigation, and compelling visual elements. My goal is to enhance user experience through thoughtful design that aligns with the brand's identity and goals. <br>
+                </p>
+                <label for="btn5" class="readLabel toggle-text">Read More <img class="chevron-icon" src="chevron.png" alt=""></label>
+            </div>
         </div>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                effect: 'pagination',
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: 'auto',
-                coverflowEffect: {
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'pagination',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, 
+                disableOnInteraction: false,
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    if (swiper.autoplay.running) {
+                        swiper.autoplay.start();
+                    }
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                autoplay: {
-                    delay: 3000, 
-                    disableOnInteraction: false,
-                },
-                on: {
-                    slideChangeTransitionEnd: function () {
-                        if (swiper.autoplay.running) {
-                            swiper.autoplay.start();
-                        }
-                    },
-                },
-            });
-
-            document.querySelectorAll('.toggle-text').forEach(item => {
+            },
+        });
+    
+        document.querySelectorAll('.readLabel').forEach(item => {
             item.addEventListener('click', function () {
                 const chevronIcon = this.querySelector('.chevron-icon');
                 const textNode = this.childNodes[0];
-
+                const projectContent = this.closest('.projectContent');
+                const projectDesc = projectContent.querySelector('.projectDesc');
+    
                 if (textNode.nodeValue.trim() === 'Read More') {
                     textNode.nodeValue = 'Read Less ';
                     chevronIcon.classList.add('rotated');
+                    projectContent.style.height = '800px'; 
+                    projectDesc.style.display = 'block';
+    
+                    
+                    swiper.autoplay.stop();
+    
+                    setTimeout(() => {
+                        textNode.nodeValue = 'Read More ';
+                        chevronIcon.classList.remove('rotated');
+                        projectContent.style.height = '520px'; 
+                        projectDesc.style.display = 'none'; 
+                        
+                       
+                        swiper.autoplay.start();
+                    }, 60000); 
                 } else {
                     textNode.nodeValue = 'Read More ';
                     chevronIcon.classList.remove('rotated');
+                    projectContent.style.height = '520px';
+                    projectDesc.style.display = 'none'; 
+                    
+                    swiper.autoplay.start();
                 }
             });
         });
-        </script>
-        
-        <!-- Include Ionicons for the dropdown arrow -->
-        <script src="https://code.ionicframework.com/ionicons/2.0.1/js/ionicons.min.js"></script>
-    </section>  
+    </script>    
+    <!-- Include Ionicons for the dropdown arrow -->
+    <script src="https://code.ionicframework.com/ionicons/2.0.1/js/ionicons.min.js"></script>
+</section>
+
 
     <!-- References Section -->
     <section class="references" id="references">
