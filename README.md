@@ -5,6 +5,7 @@ Welcome to the documentation for my portfolio website. This README outlines the 
 
 ## Links
 LinkedIn: https://www.linkedin.com/in/gert-van-der-merwe-182b47312/
+
 Group Repository: https://github.com/AJLaubscher/HMS_TL_System
 
 ## Layout and Design
